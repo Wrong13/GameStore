@@ -6,8 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.Domain", "Domain\GameStore.Domain.csproj", "{397A175F-6BB9-4FAF-AF74-8ABB552F3CC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.WebUI", "WebUI\GameStore.WebUI.csproj", "{45B01BAA-2B97-4B3B-ACEB-E8CAC06F7B26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{397A175F-6BB9-4FAF-AF74-8ABB552F3CC0} = {397A175F-6BB9-4FAF-AF74-8ABB552F3CC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.UnitTests", "UnitTestss\GameStore.UnitTests.csproj", "{5E8B47A1-98C2-4F76-B2F4-0C921BD9749C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{397A175F-6BB9-4FAF-AF74-8ABB552F3CC0} = {397A175F-6BB9-4FAF-AF74-8ABB552F3CC0}
+		{45B01BAA-2B97-4B3B-ACEB-E8CAC06F7B26} = {45B01BAA-2B97-4B3B-ACEB-E8CAC06F7B26}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
