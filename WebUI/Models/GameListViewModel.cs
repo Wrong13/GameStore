@@ -9,5 +9,6 @@ namespace WebUI.Models
     {
         public IEnumerable<Domain.Entities.Game> Games { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }
