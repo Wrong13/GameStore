@@ -94,6 +94,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\GameStore.Domain.csproj">
+      <Project>{397a175f-6bb9-4faf-af74-8abb552f3cc0}</Project>
+      <Name>GameStore.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebUI\GameStore.WebUI.csproj">
+      <Project>{45b01baa-2b97-4b3b-aceb-e8cac06f7b26}</Project>
+      <Name>GameStore.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
