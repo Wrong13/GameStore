@@ -13,6 +13,8 @@ namespace WebUI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ModelBinders.Binders.Add(typeof(Domain.Entities.Cart), 
+                new Infrastructure.Binders.CartModelBinder());
         }
     }
 }
