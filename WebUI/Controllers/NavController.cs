@@ -15,7 +15,7 @@ namespace WebUI.Controllers
         {
             repository = repo;
         }
-        public PartialViewResult Menu(string category = null)
+        public PartialViewResult Menu(string category = null,bool horizontalNav = false)
         {
             ViewBag.SelectedCategory = category;
 
@@ -23,7 +23,8 @@ namespace WebUI.Controllers
                  .Select(x => x.Category)
                  .Distinct()
                  .OrderBy(x => x);
-            return PartialView(categories);
+
+            return PartialView("FlexMenu", categories);
         }
     }
 }
