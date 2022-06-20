@@ -32,5 +32,15 @@ namespace Domain.Concrete
             }
             db.SaveChanges();
         }
+        public Game DeleteGame(int gameId)
+        {
+            Game game = db.Games.Find(gameId);
+            if (game !=null)
+            {
+                db.Games.Remove(game);
+                db.SaveChanges();
+            }
+            return game;
+        }
     }
 }

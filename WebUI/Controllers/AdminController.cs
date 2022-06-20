@@ -47,5 +47,16 @@ namespace WebUI.Controllers
             else
                 return View(game);
         }
+        [HttpPost]
+        public ActionResult Delete (int gameId)
+        {
+            Domain.Entities.Game delGame = repository.DeleteGame(gameId);
+            if (delGame != null)
+            {
+                TempData["message"] = string.Format("Игра \"{0}\" была удалена",
+                    delGame.Name);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
