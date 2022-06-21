@@ -7,6 +7,7 @@ using Domain.Abstract;
 
 namespace WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         IGameRepository repository;

@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using Domain.Concrete;
 using Moq;
 using Ninject;
+using WebUI.Infrastructure.Abstract;
+using WebUI.Infrastructure.Concrete;
 
 namespace WebUI.Infrastructure
 {
@@ -42,6 +44,7 @@ namespace WebUI.Infrastructure
 
             kernel.Bind<Domain.Abstract.IOrderProcessor>().To<Domain.Concrete.EmailOrderProcessor>()
                 .WithConstructorArgument("settings",emailSettings);
+            kernel.Bind<IAuthProvider>().To<FornAuthProvider>();
         }
     }
 }
